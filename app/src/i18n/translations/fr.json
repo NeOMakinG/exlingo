@@ -1,0 +1,138 @@
+{
+  "common": {
+    "continue": "Continuer",
+    "skip": "Passer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "search": "Rechercher",
+    "add": "Ajouter",
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Apprenez les langues à votre façon",
+      "subtitle": "Soyez proactif. Trouvez les phrases qui comptent. Notez-les. Maîtrisez-les."
+    },
+    "philosophy": {
+      "title": "Votre parcours, vos phrases",
+      "subtitle": "N'attendez pas qu'une app vous montre quoi apprendre. Cherchez du vrai contenu — films, chansons, conversations — et capturez les phrases qui vous parlent.",
+      "tip1": "Vous regardez une série ? Notez cette phrase parfaite.",
+      "tip2": "Vous lisez un article ? Sauvegardez l'expression qui a cliqué.",
+      "tip3": "Entendu quelque chose de cool ? Écrivez-le."
+    },
+    "method": {
+      "title": "La méthode proactive",
+      "subtitle": "Les apps traditionnelles vous montrent des phrases aléatoires. Vous en oublierez 90%. Mais les phrases que VOUS choisissez ? Celles-là restent.",
+      "step1": "Découvrez des phrases dans la vie réelle",
+      "step2": "Ajoutez-les avec leurs traductions",
+      "step3": "Révisez quotidiennement à votre rythme"
+    },
+    "language": {
+      "title": "Quelle est votre langue maternelle ?",
+      "subtitle": "Nous l'utiliserons pour afficher les traductions et exemples dans votre langue."
+    },
+    "ready": {
+      "title": "Vous êtes prêt !",
+      "subtitle": "Commencez à ajouter des phrases de vos contenus préférés. Nous avons inclus quelques exemples pour démarrer.",
+      "button": "Commencer"
+    }
+  },
+  "tabs": {
+    "sentences": "Phrases",
+    "youtube": "YouTube",
+    "social": "Social",
+    "settings": "Paramètres"
+  },
+  "sentences": {
+    "title": "Mes phrases",
+    "empty": {
+      "title": "Aucune phrase",
+      "subtitle": "Appuyez sur + pour ajouter votre première phrase"
+    },
+    "add": {
+      "title": "Ajouter une phrase",
+      "original": "Phrase originale",
+      "originalPlaceholder": "Entrez la phrase à apprendre...",
+      "translation": "Traduction",
+      "translationPlaceholder": "Entrez la traduction...",
+      "notes": "Notes (optionnel)",
+      "notesPlaceholder": "Contexte ou notes...",
+      "aiTranslate": "Traduction IA",
+      "aiTranslateHint": "Laissez l'IA traduire cette phrase",
+      "premiumRequired": "Fonctionnalité premium"
+    },
+    "sheet": {
+      "new": "Nouvelle langue",
+      "sentences_count": "{{count}} phrases"
+    },
+    "actions": {
+      "listen": "Écouter",
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    }
+  },
+  "youtube": {
+    "title": "Chaînes YouTube",
+    "subtitle": "Chaînes sélectionnées pour apprendre {{language}}",
+    "empty": "Aucune chaîne disponible pour cette langue"
+  },
+  "social": {
+    "title": "Posts sociaux",
+    "subtitle": "Apprenez du contenu natif",
+    "empty": "Aucun post disponible pour cette langue"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "account": "Compte",
+    "subscription": "Abonnement",
+    "subscriptionStatus": {
+      "free": "Plan gratuit",
+      "premium": "Premium"
+    },
+    "upgradeToPremium": "Passer à Premium",
+    "premiumFeatures": {
+      "title": "Fonctionnalités Premium",
+      "aiTranslation": "Traductions par IA",
+      "unlimited": "Phrases illimitées",
+      "sync": "Synchronisation cloud"
+    },
+    "nativeLanguage": "Langue maternelle",
+    "appLanguage": "Langue de l'app",
+    "signOut": "Se déconnecter",
+    "deleteAccount": "Supprimer le compte",
+    "about": "À propos",
+    "version": "Version"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signInWith": {
+      "google": "Continuer avec Google",
+      "apple": "Continuer avec Apple"
+    },
+    "signOut": "Se déconnecter",
+    "signingIn": "Connexion..."
+  },
+  "languages": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "de": "Allemand",
+    "it": "Italien",
+    "pt": "Portugais",
+    "nl": "Néerlandais",
+    "ru": "Russe",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "ko": "Coréen",
+    "ar": "Arabe",
+    "hi": "Hindi",
+    "tr": "Turc",
+    "pl": "Polonais",
+    "vi": "Vietnamien"
+  }
+}

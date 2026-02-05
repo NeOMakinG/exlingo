@@ -1,0 +1,138 @@
+{
+  "common": {
+    "continue": "Continue",
+    "skip": "Skip",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "add": "Add",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Learn Languages Your Way",
+      "subtitle": "Be proactive. Find sentences that matter to you. Note them. Master them."
+    },
+    "philosophy": {
+      "title": "Your Journey, Your Sentences",
+      "subtitle": "Don't wait for apps to show you what to learn. Search for real content — movies, songs, conversations — and capture the sentences that resonate with you.",
+      "tip1": "Watch a show? Note that perfect phrase.",
+      "tip2": "Read an article? Save the expression that clicked.",
+      "tip3": "Heard something cool? Write it down."
+    },
+    "method": {
+      "title": "The Proactive Method",
+      "subtitle": "Traditional apps feed you random sentences. You'll forget 90% of them. But sentences YOU choose? Those stick.",
+      "step1": "Discover sentences in the wild",
+      "step2": "Add them with translations",
+      "step3": "Review daily at your own pace"
+    },
+    "language": {
+      "title": "What's Your Native Language?",
+      "subtitle": "We'll use this to show translations and examples in your language."
+    },
+    "ready": {
+      "title": "You're All Set!",
+      "subtitle": "Start adding sentences from your favorite content. We've included some examples to get you started.",
+      "button": "Start Learning"
+    }
+  },
+  "tabs": {
+    "sentences": "Sentences",
+    "youtube": "YouTube",
+    "social": "Social",
+    "settings": "Settings"
+  },
+  "sentences": {
+    "title": "My Sentences",
+    "empty": {
+      "title": "No sentences yet",
+      "subtitle": "Tap + to add your first sentence"
+    },
+    "add": {
+      "title": "Add Sentence",
+      "original": "Original sentence",
+      "originalPlaceholder": "Enter the sentence you want to learn...",
+      "translation": "Translation",
+      "translationPlaceholder": "Enter the translation...",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "Any context or notes...",
+      "aiTranslate": "AI Translate",
+      "aiTranslateHint": "Let AI help translate this sentence",
+      "premiumRequired": "Premium feature"
+    },
+    "sheet": {
+      "new": "New Language",
+      "sentences_count": "{{count}} sentences"
+    },
+    "actions": {
+      "listen": "Listen",
+      "edit": "Edit",
+      "delete": "Delete"
+    }
+  },
+  "youtube": {
+    "title": "YouTube Channels",
+    "subtitle": "Curated channels to learn {{language}}",
+    "empty": "No channels available for this language yet"
+  },
+  "social": {
+    "title": "Social Posts",
+    "subtitle": "Learn from native content",
+    "empty": "No posts available for this language yet"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "subscription": "Subscription",
+    "subscriptionStatus": {
+      "free": "Free Plan",
+      "premium": "Premium"
+    },
+    "upgradeToPremium": "Upgrade to Premium",
+    "premiumFeatures": {
+      "title": "Premium Features",
+      "aiTranslation": "AI-powered translations",
+      "unlimited": "Unlimited sentences",
+      "sync": "Cloud sync across devices"
+    },
+    "nativeLanguage": "Native Language",
+    "appLanguage": "App Language",
+    "signOut": "Sign Out",
+    "deleteAccount": "Delete Account",
+    "about": "About",
+    "version": "Version"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInWith": {
+      "google": "Continue with Google",
+      "apple": "Continue with Apple"
+    },
+    "signOut": "Sign Out",
+    "signingIn": "Signing in..."
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "de": "German",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "nl": "Dutch",
+    "ru": "Russian",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "tr": "Turkish",
+    "pl": "Polish",
+    "vi": "Vietnamese"
+  }
+}
