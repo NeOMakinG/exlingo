@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import Animated, { FadeIn, FadeInUp, ZoomIn, SlideInRight } from 'react-native-reanimated';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
 export default function MethodScreen() {
@@ -15,18 +16,26 @@ export default function MethodScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <View style={styles.illustration}>
+        <Animated.View style={styles.illustration} entering={ZoomIn.delay(100).duration(500).springify()}>
           <Text style={styles.emoji}>🧠</Text>
-        </View>
+        </Animated.View>
 
         <View style={styles.textContainer}>
-          <Text style={styles.title}>{t('onboarding.method.title')}</Text>
-          <Text style={styles.subtitle}>{t('onboarding.method.subtitle')}</Text>
+          <Animated.Text style={styles.title} entering={FadeInUp.delay(200).duration(400)}>
+            {t('onboarding.method.title')}
+          </Animated.Text>
+          <Animated.Text style={styles.subtitle} entering={FadeInUp.delay(350).duration(400)}>
+            {t('onboarding.method.subtitle')}
+          </Animated.Text>
         </View>
 
         <View style={styles.stepsContainer}>
           {steps.map((step, index) => (
-            <View key={index} style={styles.stepCard}>
+            <Animated.View 
+              key={index} 
+              style={styles.stepCard}
+              entering={SlideInRight.delay(500 + index * 150).duration(400).springify()}
+            >
               <View style={styles.stepNumber}>
                 <Text style={styles.stepNumberText}>{step.number}</Text>
               </View>
@@ -34,12 +43,12 @@ export default function MethodScreen() {
                 <Text style={styles.stepText}>{step.text}</Text>
               </View>
               <Text style={styles.stepEmoji}>{step.emoji}</Text>
-            </View>
+            </Animated.View>
           ))}
         </View>
       </View>
 
-      <View style={styles.footer}>
+      <Animated.View style={styles.footer} entering={FadeIn.delay(1000).duration(400)}>
         <View style={styles.pagination}>
           <View style={styles.dot} />
           <View style={styles.dot} />
@@ -54,7 +63,7 @@ export default function MethodScreen() {
         >
           <Text style={styles.buttonText}>{t('common.continue')}</Text>
         </Pressable>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 }

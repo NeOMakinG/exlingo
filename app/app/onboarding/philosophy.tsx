@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import Animated, { FadeIn, FadeInUp, ZoomIn } from 'react-native-reanimated';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
 export default function PhilosophyScreen() {
@@ -15,26 +16,34 @@ export default function PhilosophyScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <View style={styles.illustration}>
+        <Animated.View style={styles.illustration} entering={ZoomIn.delay(100).duration(500).springify()}>
           <Text style={styles.emoji}>🔍</Text>
-        </View>
+        </Animated.View>
 
         <View style={styles.textContainer}>
-          <Text style={styles.title}>{t('onboarding.philosophy.title')}</Text>
-          <Text style={styles.subtitle}>{t('onboarding.philosophy.subtitle')}</Text>
+          <Animated.Text style={styles.title} entering={FadeInUp.delay(200).duration(400)}>
+            {t('onboarding.philosophy.title')}
+          </Animated.Text>
+          <Animated.Text style={styles.subtitle} entering={FadeInUp.delay(350).duration(400)}>
+            {t('onboarding.philosophy.subtitle')}
+          </Animated.Text>
         </View>
 
         <View style={styles.tipsContainer}>
           {tips.map((tip, index) => (
-            <View key={index} style={styles.tipCard}>
+            <Animated.View 
+              key={index} 
+              style={styles.tipCard}
+              entering={FadeInUp.delay(500 + index * 150).duration(400)}
+            >
               <Text style={styles.tipEmoji}>{tip.emoji}</Text>
               <Text style={styles.tipText}>{tip.text}</Text>
-            </View>
+            </Animated.View>
           ))}
         </View>
       </View>
 
-      <View style={styles.footer}>
+      <Animated.View style={styles.footer} entering={FadeIn.delay(1000).duration(400)}>
         <View style={styles.pagination}>
           <View style={styles.dot} />
           <View style={[styles.dot, styles.dotActive]} />
@@ -49,7 +58,7 @@ export default function PhilosophyScreen() {
         >
           <Text style={styles.buttonText}>{t('common.continue')}</Text>
         </Pressable>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 }

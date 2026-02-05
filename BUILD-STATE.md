@@ -1,6 +1,6 @@
 # LingoNotes Build State
 
-## Current Status: 🟡 In Progress (60% complete)
+## Current Status: 🟡 In Progress (70% complete)
 
 ## ✅ Completed Features
 
@@ -53,9 +53,9 @@
 ## 🔲 TODO Features
 
 ### High Priority
-- [ ] **Google Sign In** - expo-auth-session flow
-- [ ] **Apple Sign In** - expo-apple-authentication
-- [ ] **Onboarding animations** - react-native-reanimated fade/slide
+- [x] **Google Sign In** - expo-auth-session flow
+- [x] **Apple Sign In** - expo-apple-authentication
+- [x] **Onboarding animations** - react-native-reanimated fade/slide
 
 ### UI Polish
 - [ ] Gradient backgrounds on cards
@@ -89,6 +89,18 @@
 ---
 
 ## 📝 Session Log
+
+### 2026-02-06 (Auth & Animations)
+- Added Apple Sign In screen at `app/(auth)/sign-in.tsx`
+- Added Google Sign In using expo-auth-session
+- Added react-native-reanimated animations to all 5 onboarding screens:
+  - Welcome: ZoomIn emoji, FadeInUp title/subtitle
+  - Philosophy: ZoomIn, staggered FadeInUp cards
+  - Method: SlideInRight steps with spring physics
+  - Language: Staggered FadeInUp language cards
+  - Ready: BounceIn rocket, FadeInUp features, ZoomIn CTA button
+- Updated EN/FR translations with auth screen strings
+- Fixed TypeScript error in api.ts (headers typing)
 
 ### 2026-02-05 14:30 (Initial Build)
 - Scaffolded complete Expo app structure

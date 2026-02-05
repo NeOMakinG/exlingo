@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import Animated, { FadeIn, FadeInDown, FadeInUp, ZoomIn } from 'react-native-reanimated';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
 export default function WelcomeScreen() {
@@ -9,18 +10,28 @@ export default function WelcomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        {/* Hero illustration placeholder */}
-        <View style={styles.illustration}>
+        {/* Hero illustration */}
+        <Animated.View style={styles.illustration} entering={ZoomIn.delay(200).duration(600).springify()}>
           <Text style={styles.emoji}>📝</Text>
-        </View>
+        </Animated.View>
 
         <View style={styles.textContainer}>
-          <Text style={styles.title}>{t('onboarding.welcome.title')}</Text>
-          <Text style={styles.subtitle}>{t('onboarding.welcome.subtitle')}</Text>
+          <Animated.Text 
+            style={styles.title} 
+            entering={FadeInUp.delay(400).duration(500)}
+          >
+            {t('onboarding.welcome.title')}
+          </Animated.Text>
+          <Animated.Text 
+            style={styles.subtitle}
+            entering={FadeInUp.delay(600).duration(500)}
+          >
+            {t('onboarding.welcome.subtitle')}
+          </Animated.Text>
         </View>
       </View>
 
-      <View style={styles.footer}>
+      <Animated.View style={styles.footer} entering={FadeIn.delay(800).duration(500)}>
         <View style={styles.pagination}>
           <View style={[styles.dot, styles.dotActive]} />
           <View style={styles.dot} />
@@ -35,7 +46,7 @@ export default function WelcomeScreen() {
         >
           <Text style={styles.buttonText}>{t('common.continue')}</Text>
         </Pressable>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 }

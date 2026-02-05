@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import Animated, { FadeIn, FadeInUp, ZoomIn, BounceIn } from 'react-native-reanimated';
 import { useStore } from '../../src/store/useStore';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
@@ -13,35 +14,43 @@ export default function ReadyScreen() {
     router.replace('/(tabs)/sentences');
   };
 
+  const features = [
+    { emoji: '📝', text: 'Add sentences from movies, books, songs' },
+    { emoji: '🔊', text: 'Listen to pronunciation' },
+    { emoji: '🎯', text: 'Review at your own pace' },
+  ];
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <View style={styles.illustration}>
+        <Animated.View style={styles.illustration} entering={BounceIn.delay(200).duration(600)}>
           <Text style={styles.emoji}>🚀</Text>
-        </View>
+        </Animated.View>
 
         <View style={styles.textContainer}>
-          <Text style={styles.title}>{t('onboarding.ready.title')}</Text>
-          <Text style={styles.subtitle}>{t('onboarding.ready.subtitle')}</Text>
+          <Animated.Text style={styles.title} entering={FadeInUp.delay(400).duration(500)}>
+            {t('onboarding.ready.title')}
+          </Animated.Text>
+          <Animated.Text style={styles.subtitle} entering={FadeInUp.delay(550).duration(500)}>
+            {t('onboarding.ready.subtitle')}
+          </Animated.Text>
         </View>
 
         <View style={styles.features}>
-          <View style={styles.featureItem}>
-            <Text style={styles.featureEmoji}>📝</Text>
-            <Text style={styles.featureText}>Add sentences from movies, books, songs</Text>
-          </View>
-          <View style={styles.featureItem}>
-            <Text style={styles.featureEmoji}>🔊</Text>
-            <Text style={styles.featureText}>Listen to pronunciation</Text>
-          </View>
-          <View style={styles.featureItem}>
-            <Text style={styles.featureEmoji}>🎯</Text>
-            <Text style={styles.featureText}>Review at your own pace</Text>
-          </View>
+          {features.map((feature, index) => (
+            <Animated.View 
+              key={index} 
+              style={styles.featureItem}
+              entering={FadeInUp.delay(700 + index * 100).duration(400)}
+            >
+              <Text style={styles.featureEmoji}>{feature.emoji}</Text>
+              <Text style={styles.featureText}>{feature.text}</Text>
+            </Animated.View>
+          ))}
         </View>
       </View>
 
-      <View style={styles.footer}>
+      <Animated.View style={styles.footer} entering={FadeIn.delay(1100).duration(400)}>
         <View style={styles.pagination}>
           <View style={styles.dot} />
           <View style={styles.dot} />
@@ -50,10 +59,12 @@ export default function ReadyScreen() {
           <View style={[styles.dot, styles.dotActive]} />
         </View>
 
-        <Pressable style={styles.button} onPress={handleStart}>
-          <Text style={styles.buttonText}>{t('onboarding.ready.button')}</Text>
-        </Pressable>
-      </View>
+        <Animated.View entering={ZoomIn.delay(1200).duration(300)}>
+          <Pressable style={styles.button} onPress={handleStart}>
+            <Text style={styles.buttonText}>{t('onboarding.ready.button')}</Text>
+          </Pressable>
+        </Animated.View>
+      </Animated.View>
     </SafeAreaView>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { View, Text, StyleSheet, Pressable, SafeAreaView, ScrollView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import Animated, { FadeIn, FadeInUp, FadeInDown } from 'react-native-reanimated';
 import { useStore } from '../../src/store/useStore';
 import { SUPPORTED_LANGUAGES } from '../../src/utils/languages';
 import { LanguageCode } from '../../src/types';
@@ -40,40 +41,44 @@ export default function LanguageScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
+      <Animated.View style={styles.header} entering={FadeInDown.delay(100).duration(400)}>
         <Text style={styles.title}>{t('onboarding.language.title')}</Text>
         <Text style={styles.subtitle}>{t('onboarding.language.subtitle')}</Text>
-      </View>
+      </Animated.View>
 
       <ScrollView 
         style={styles.scrollView}
         contentContainerStyle={styles.languageGrid}
         showsVerticalScrollIndicator={false}
       >
-        {SUPPORTED_LANGUAGES.map((lang) => (
-          <Pressable
+        {SUPPORTED_LANGUAGES.map((lang, index) => (
+          <Animated.View 
             key={lang.code}
-            style={[
-              styles.languageCard,
-              selectedLanguage === lang.code && styles.languageCardSelected,
-            ]}
-            onPress={() => setSelectedLanguage(lang.code)}
+            entering={FadeInUp.delay(200 + index * 50).duration(300)}
           >
-            <Text style={styles.flag}>{lang.flag}</Text>
-            <View style={styles.languageInfo}>
-              <Text style={styles.languageName}>{lang.nativeName}</Text>
-              <Text style={styles.languageNameEnglish}>{lang.name}</Text>
-            </View>
-            {selectedLanguage === lang.code && (
-              <View style={styles.checkmark}>
-                <Text style={styles.checkmarkText}>✓</Text>
+            <Pressable
+              style={[
+                styles.languageCard,
+                selectedLanguage === lang.code && styles.languageCardSelected,
+              ]}
+              onPress={() => setSelectedLanguage(lang.code)}
+            >
+              <Text style={styles.flag}>{lang.flag}</Text>
+              <View style={styles.languageInfo}>
+                <Text style={styles.languageName}>{lang.nativeName}</Text>
+                <Text style={styles.languageNameEnglish}>{lang.name}</Text>
               </View>
-            )}
-          </Pressable>
+              {selectedLanguage === lang.code && (
+                <Animated.View style={styles.checkmark} entering={FadeIn.duration(200)}>
+                  <Text style={styles.checkmarkText}>✓</Text>
+                </Animated.View>
+              )}
+            </Pressable>
+          </Animated.View>
         ))}
       </ScrollView>
 
-      <View style={styles.footer}>
+      <Animated.View style={styles.footer} entering={FadeIn.delay(800).duration(400)}>
         <View style={styles.pagination}>
           <View style={styles.dot} />
           <View style={styles.dot} />
@@ -85,7 +90,7 @@ export default function LanguageScreen() {
         <Pressable style={styles.button} onPress={handleContinue}>
           <Text style={styles.buttonText}>{t('common.continue')}</Text>
         </Pressable>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   );
 }

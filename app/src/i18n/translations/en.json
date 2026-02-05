@@ -109,11 +109,20 @@
     "version": "Version"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": {
-      "google": "Continue with Google",
-      "apple": "Continue with Apple"
+    "signIn": {
+      "title": "Sign in to LingoNotes",
+      "subtitle": "Sync your sentences across devices and unlock premium features.",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithApple": "Continue with Apple",
+      "termsPrefix": "By continuing, you agree to our",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy",
+      "skip": "Continue without account"
     },
+    "error": "Authentication Error",
+    "googleError": "Failed to sign in with Google. Please try again.",
+    "appleError": "Failed to sign in with Apple. Please try again.",
     "signOut": "Sign Out",
     "signingIn": "Signing in..."
   },

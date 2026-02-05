@@ -109,11 +109,20 @@
     "version": "Version"
   },
   "auth": {
-    "signIn": "Se connecter",
-    "signInWith": {
-      "google": "Continuer avec Google",
-      "apple": "Continuer avec Apple"
+    "signIn": {
+      "title": "Connectez-vous à LingoNotes",
+      "subtitle": "Synchronisez vos phrases sur tous vos appareils et débloquez les fonctionnalités premium.",
+      "continueWithGoogle": "Continuer avec Google",
+      "continueWithApple": "Continuer avec Apple",
+      "termsPrefix": "En continuant, vous acceptez nos",
+      "terms": "Conditions d'utilisation",
+      "and": "et",
+      "privacy": "Politique de confidentialité",
+      "skip": "Continuer sans compte"
     },
+    "error": "Erreur d'authentification",
+    "googleError": "Échec de la connexion avec Google. Veuillez réessayer.",
+    "appleError": "Échec de la connexion avec Apple. Veuillez réessayer.",
     "signOut": "Se déconnecter",
     "signingIn": "Connexion..."
   },
