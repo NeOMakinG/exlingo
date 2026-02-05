@@ -1,0 +1,147 @@
+{
+  "common": {
+    "continue": "Continua",
+    "skip": "Salta",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "search": "Cerca",
+    "add": "Aggiungi",
+    "close": "Chiudi",
+    "loading": "Caricamento...",
+    "error": "Qualcosa è andato storto",
+    "retry": "Riprova"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Impara le lingue a modo tuo",
+      "subtitle": "Sii proattivo. Trova frasi che contano per te. Annotale. Padroneggia."
+    },
+    "philosophy": {
+      "title": "Il tuo viaggio, le tue frasi",
+      "subtitle": "Non aspettare che un'app ti mostri cosa imparare. Cerca contenuti reali — film, canzoni, conversazioni — e cattura le frasi che ti colpiscono.",
+      "tip1": "Hai visto una serie? Annota quella frase perfetta.",
+      "tip2": "Hai letto un articolo? Salva l'espressione che ti ha colpito.",
+      "tip3": "Hai sentito qualcosa di interessante? Scrivilo."
+    },
+    "method": {
+      "title": "Il metodo proattivo",
+      "subtitle": "Le app tradizionali ti mostrano frasi casuali. Dimenticherai il 90%. Ma le frasi che TU scegli? Quelle restano.",
+      "step1": "Scopri frasi nella vita reale",
+      "step2": "Aggiungile con le traduzioni",
+      "step3": "Ripassa ogni giorno al tuo ritmo"
+    },
+    "language": {
+      "title": "Qual è la tua lingua madre?",
+      "subtitle": "La useremo per mostrarti traduzioni ed esempi nella tua lingua."
+    },
+    "ready": {
+      "title": "Sei pronto!",
+      "subtitle": "Inizia ad aggiungere frasi dai tuoi contenuti preferiti. Abbiamo incluso alcuni esempi per iniziare.",
+      "button": "Inizia a imparare"
+    }
+  },
+  "tabs": {
+    "sentences": "Frasi",
+    "youtube": "YouTube",
+    "social": "Social",
+    "settings": "Impostazioni"
+  },
+  "sentences": {
+    "title": "Le mie frasi",
+    "empty": {
+      "title": "Nessuna frase ancora",
+      "subtitle": "Tocca + per aggiungere la tua prima frase"
+    },
+    "add": {
+      "title": "Aggiungi frase",
+      "original": "Frase originale",
+      "originalPlaceholder": "Inserisci la frase che vuoi imparare...",
+      "translation": "Traduzione",
+      "translationPlaceholder": "Inserisci la traduzione...",
+      "notes": "Note (opzionale)",
+      "notesPlaceholder": "Contesto o note...",
+      "aiTranslate": "Traduzione IA",
+      "aiTranslateHint": "Lascia che l'IA traduca questa frase",
+      "premiumRequired": "Funzione premium"
+    },
+    "sheet": {
+      "new": "Nuova lingua",
+      "sentences_count": "{{count}} frasi"
+    },
+    "actions": {
+      "listen": "Ascolta",
+      "edit": "Modifica",
+      "delete": "Elimina"
+    }
+  },
+  "youtube": {
+    "title": "Canali YouTube",
+    "subtitle": "Canali selezionati per imparare {{language}}",
+    "empty": "Nessun canale disponibile per questa lingua"
+  },
+  "social": {
+    "title": "Post social",
+    "subtitle": "Impara da contenuti autentici",
+    "empty": "Nessun post disponibile per questa lingua"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "account": "Account",
+    "subscription": "Abbonamento",
+    "subscriptionStatus": {
+      "free": "Piano gratuito",
+      "premium": "Premium"
+    },
+    "upgradeToPremium": "Passa a Premium",
+    "premiumFeatures": {
+      "title": "Funzionalità Premium",
+      "aiTranslation": "Traduzioni con IA",
+      "unlimited": "Frasi illimitate",
+      "sync": "Sincronizzazione cloud"
+    },
+    "nativeLanguage": "Lingua madre",
+    "appLanguage": "Lingua app",
+    "signOut": "Esci",
+    "deleteAccount": "Elimina account",
+    "about": "Info",
+    "version": "Versione"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Accedi a LingoNotes",
+      "subtitle": "Sincronizza le tue frasi su tutti i dispositivi e sblocca le funzionalità premium.",
+      "continueWithGoogle": "Continua con Google",
+      "continueWithApple": "Continua con Apple",
+      "termsPrefix": "Continuando, accetti i nostri",
+      "terms": "Termini di servizio",
+      "and": "e",
+      "privacy": "Informativa sulla privacy",
+      "skip": "Continua senza account"
+    },
+    "error": "Errore di autenticazione",
+    "googleError": "Accesso con Google fallito. Riprova.",
+    "appleError": "Accesso con Apple fallito. Riprova.",
+    "signOut": "Esci",
+    "signingIn": "Accesso in corso..."
+  },
+  "languages": {
+    "en": "Inglese",
+    "es": "Spagnolo",
+    "fr": "Francese",
+    "de": "Tedesco",
+    "it": "Italiano",
+    "pt": "Portoghese",
+    "nl": "Olandese",
+    "ru": "Russo",
+    "zh": "Cinese",
+    "ja": "Giapponese",
+    "ko": "Coreano",
+    "ar": "Arabo",
+    "hi": "Hindi",
+    "tr": "Turco",
+    "pl": "Polacco",
+    "vi": "Vietnamita"
+  }
+}

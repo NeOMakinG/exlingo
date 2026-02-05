@@ -1,0 +1,147 @@
+{
+  "common": {
+    "continue": "Continuar",
+    "skip": "Pular",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "search": "Pesquisar",
+    "add": "Adicionar",
+    "close": "Fechar",
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "retry": "Tentar novamente"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Aprenda idiomas do seu jeito",
+      "subtitle": "Seja proativo. Encontre frases que importam para você. Anote-as. Domine-as."
+    },
+    "philosophy": {
+      "title": "Sua jornada, suas frases",
+      "subtitle": "Não espere que apps te mostrem o que aprender. Busque conteúdo real — filmes, músicas, conversas — e capture as frases que ressoam com você.",
+      "tip1": "Assistiu uma série? Anote aquela frase perfeita.",
+      "tip2": "Leu um artigo? Salve a expressão que te marcou.",
+      "tip3": "Ouviu algo legal? Escreva."
+    },
+    "method": {
+      "title": "O método proativo",
+      "subtitle": "Apps tradicionais te mostram frases aleatórias. Você vai esquecer 90% delas. Mas as frases que VOCÊ escolhe? Essas ficam.",
+      "step1": "Descubra frases na vida real",
+      "step2": "Adicione-as com traduções",
+      "step3": "Revise diariamente no seu ritmo"
+    },
+    "language": {
+      "title": "Qual é a sua língua nativa?",
+      "subtitle": "Usaremos para mostrar traduções e exemplos na sua língua."
+    },
+    "ready": {
+      "title": "Você está pronto!",
+      "subtitle": "Comece a adicionar frases do seu conteúdo favorito. Incluímos alguns exemplos para começar.",
+      "button": "Começar a aprender"
+    }
+  },
+  "tabs": {
+    "sentences": "Frases",
+    "youtube": "YouTube",
+    "social": "Social",
+    "settings": "Configurações"
+  },
+  "sentences": {
+    "title": "Minhas frases",
+    "empty": {
+      "title": "Nenhuma frase ainda",
+      "subtitle": "Toque em + para adicionar sua primeira frase"
+    },
+    "add": {
+      "title": "Adicionar frase",
+      "original": "Frase original",
+      "originalPlaceholder": "Digite a frase que quer aprender...",
+      "translation": "Tradução",
+      "translationPlaceholder": "Digite a tradução...",
+      "notes": "Notas (opcional)",
+      "notesPlaceholder": "Contexto ou notas...",
+      "aiTranslate": "Tradução IA",
+      "aiTranslateHint": "Deixe a IA traduzir esta frase",
+      "premiumRequired": "Recurso premium"
+    },
+    "sheet": {
+      "new": "Novo idioma",
+      "sentences_count": "{{count}} frases"
+    },
+    "actions": {
+      "listen": "Ouvir",
+      "edit": "Editar",
+      "delete": "Excluir"
+    }
+  },
+  "youtube": {
+    "title": "Canais do YouTube",
+    "subtitle": "Canais selecionados para aprender {{language}}",
+    "empty": "Nenhum canal disponível para este idioma ainda"
+  },
+  "social": {
+    "title": "Posts sociais",
+    "subtitle": "Aprenda com conteúdo nativo",
+    "empty": "Nenhum post disponível para este idioma ainda"
+  },
+  "settings": {
+    "title": "Configurações",
+    "account": "Conta",
+    "subscription": "Assinatura",
+    "subscriptionStatus": {
+      "free": "Plano gratuito",
+      "premium": "Premium"
+    },
+    "upgradeToPremium": "Atualizar para Premium",
+    "premiumFeatures": {
+      "title": "Recursos Premium",
+      "aiTranslation": "Traduções com IA",
+      "unlimited": "Frases ilimitadas",
+      "sync": "Sincronização na nuvem"
+    },
+    "nativeLanguage": "Língua nativa",
+    "appLanguage": "Idioma do app",
+    "signOut": "Sair",
+    "deleteAccount": "Excluir conta",
+    "about": "Sobre",
+    "version": "Versão"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Entre no LingoNotes",
+      "subtitle": "Sincronize suas frases em todos os dispositivos e desbloqueie recursos premium.",
+      "continueWithGoogle": "Continuar com Google",
+      "continueWithApple": "Continuar com Apple",
+      "termsPrefix": "Ao continuar, você aceita nossos",
+      "terms": "Termos de serviço",
+      "and": "e",
+      "privacy": "Política de privacidade",
+      "skip": "Continuar sem conta"
+    },
+    "error": "Erro de autenticação",
+    "googleError": "Falha ao entrar com Google. Tente novamente.",
+    "appleError": "Falha ao entrar com Apple. Tente novamente.",
+    "signOut": "Sair",
+    "signingIn": "Entrando..."
+  },
+  "languages": {
+    "en": "Inglês",
+    "es": "Espanhol",
+    "fr": "Francês",
+    "de": "Alemão",
+    "it": "Italiano",
+    "pt": "Português",
+    "nl": "Holandês",
+    "ru": "Russo",
+    "zh": "Chinês",
+    "ja": "Japonês",
+    "ko": "Coreano",
+    "ar": "Árabe",
+    "hi": "Hindi",
+    "tr": "Turco",
+    "pl": "Polonês",
+    "vi": "Vietnamita"
+  }
+}

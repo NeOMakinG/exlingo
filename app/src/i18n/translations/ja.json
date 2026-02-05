@@ -1,0 +1,147 @@
+{
+  "common": {
+    "continue": "続ける",
+    "skip": "スキップ",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "search": "検索",
+    "add": "追加",
+    "close": "閉じる",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "あなた流の言語学習",
+      "subtitle": "主体的に学ぼう。大切なフレーズを見つけて、メモして、マスターしよう。"
+    },
+    "philosophy": {
+      "title": "あなたの旅、あなたのフレーズ",
+      "subtitle": "アプリに何を学ぶか教えてもらうのを待たないで。映画、音楽、会話など本物のコンテンツを探して、心に響くフレーズを集めよう。",
+      "tip1": "ドラマを見た？その完璧なフレーズをメモしよう。",
+      "tip2": "記事を読んだ？印象的な表現を保存しよう。",
+      "tip3": "かっこいい言い回しを聞いた？書き留めよう。"
+    },
+    "method": {
+      "title": "プロアクティブメソッド",
+      "subtitle": "従来のアプリはランダムなフレーズを見せます。その90%は忘れるでしょう。でもあなたが選んだフレーズは？それは記憶に残ります。",
+      "step1": "日常生活でフレーズを発見",
+      "step2": "翻訳付きで追加",
+      "step3": "自分のペースで毎日復習"
+    },
+    "language": {
+      "title": "母国語は何ですか？",
+      "subtitle": "翻訳や例文をあなたの言語で表示するために使用します。"
+    },
+    "ready": {
+      "title": "準備完了！",
+      "subtitle": "お気に入りのコンテンツからフレーズを追加し始めましょう。始めるためのサンプルを用意しました。",
+      "button": "学習を始める"
+    }
+  },
+  "tabs": {
+    "sentences": "フレーズ",
+    "youtube": "YouTube",
+    "social": "ソーシャル",
+    "settings": "設定"
+  },
+  "sentences": {
+    "title": "マイフレーズ",
+    "empty": {
+      "title": "フレーズがありません",
+      "subtitle": "+をタップして最初のフレーズを追加"
+    },
+    "add": {
+      "title": "フレーズを追加",
+      "original": "元のフレーズ",
+      "originalPlaceholder": "学びたいフレーズを入力...",
+      "translation": "翻訳",
+      "translationPlaceholder": "翻訳を入力...",
+      "notes": "メモ（任意）",
+      "notesPlaceholder": "文脈やメモ...",
+      "aiTranslate": "AI翻訳",
+      "aiTranslateHint": "AIにこのフレーズを翻訳させる",
+      "premiumRequired": "プレミアム機能"
+    },
+    "sheet": {
+      "new": "新しい言語",
+      "sentences_count": "{{count}}フレーズ"
+    },
+    "actions": {
+      "listen": "聴く",
+      "edit": "編集",
+      "delete": "削除"
+    }
+  },
+  "youtube": {
+    "title": "YouTubeチャンネル",
+    "subtitle": "{{language}}を学ぶための厳選チャンネル",
+    "empty": "この言語のチャンネルはまだありません"
+  },
+  "social": {
+    "title": "ソーシャル投稿",
+    "subtitle": "ネイティブコンテンツから学ぶ",
+    "empty": "この言語の投稿はまだありません"
+  },
+  "settings": {
+    "title": "設定",
+    "account": "アカウント",
+    "subscription": "サブスクリプション",
+    "subscriptionStatus": {
+      "free": "無料プラン",
+      "premium": "プレミアム"
+    },
+    "upgradeToPremium": "プレミアムにアップグレード",
+    "premiumFeatures": {
+      "title": "プレミアム機能",
+      "aiTranslation": "AI翻訳",
+      "unlimited": "無制限のフレーズ",
+      "sync": "クラウド同期"
+    },
+    "nativeLanguage": "母国語",
+    "appLanguage": "アプリの言語",
+    "signOut": "サインアウト",
+    "deleteAccount": "アカウントを削除",
+    "about": "について",
+    "version": "バージョン"
+  },
+  "auth": {
+    "signIn": {
+      "title": "LingoNotesにサインイン",
+      "subtitle": "すべてのデバイスでフレーズを同期し、プレミアム機能をアンロック。",
+      "continueWithGoogle": "Googleで続ける",
+      "continueWithApple": "Appleで続ける",
+      "termsPrefix": "続けることで、以下に同意したことになります：",
+      "terms": "利用規約",
+      "and": "と",
+      "privacy": "プライバシーポリシー",
+      "skip": "アカウントなしで続ける"
+    },
+    "error": "認証エラー",
+    "googleError": "Googleでのサインインに失敗しました。もう一度お試しください。",
+    "appleError": "Appleでのサインインに失敗しました。もう一度お試しください。",
+    "signOut": "サインアウト",
+    "signingIn": "サインイン中..."
+  },
+  "languages": {
+    "en": "英語",
+    "es": "スペイン語",
+    "fr": "フランス語",
+    "de": "ドイツ語",
+    "it": "イタリア語",
+    "pt": "ポルトガル語",
+    "nl": "オランダ語",
+    "ru": "ロシア語",
+    "zh": "中国語",
+    "ja": "日本語",
+    "ko": "韓国語",
+    "ar": "アラビア語",
+    "hi": "ヒンディー語",
+    "tr": "トルコ語",
+    "pl": "ポーランド語",
+    "vi": "ベトナム語"
+  }
+}

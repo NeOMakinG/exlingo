@@ -1,6 +1,6 @@
 # Exlingo Build State
 
-## Current Status: 🟡 In Progress (70% complete)
+## Current Status: 🟡 In Progress (80% complete)
 
 ## ✅ Completed Features
 
@@ -47,6 +47,23 @@
 ### i18n
 - [x] English (complete)
 - [x] French (complete)
+- [x] German (complete) ✨ NEW
+- [x] Spanish (complete) ✨ NEW
+- [x] Italian (complete) ✨ NEW
+- [x] Portuguese (complete) ✨ NEW
+- [x] Japanese (complete) ✨ NEW
+- [x] Korean (complete) ✨ NEW
+- [x] Chinese (complete) ✨ NEW
+
+### UI Polish ✨ NEW
+- [x] GradientCard component with press states
+- [x] PressableScale component for touchable feedback
+- [x] Button component with gradient variants
+- [x] SentenceCard component with animations
+- [x] Gradient backgrounds on onboarding screens
+- [x] Platform-specific shadows (iOS/Android)
+- [x] Press states on interactive elements
+- [x] expo-linear-gradient integration
 
 ---
 
@@ -58,20 +75,11 @@
 - [x] **Onboarding animations** - react-native-reanimated fade/slide
 
 ### UI Polish
-- [ ] Gradient backgrounds on cards
-- [ ] Better shadows (iOS/Android)
-- [ ] Press states on buttons
+- [x] Gradient backgrounds on cards
+- [x] Better shadows (iOS/Android)
+- [x] Press states on buttons
 - [ ] Loading skeletons
 - [ ] Empty state illustrations
-
-### More Translations
-- [ ] German (DE)
-- [ ] Spanish (ES)
-- [ ] Italian (IT)
-- [ ] Portuguese (PT)
-- [ ] Japanese (JA)
-- [ ] Korean (KO)
-- [ ] Chinese (ZH)
 
 ### New Features
 - [ ] Review/practice mode (spaced repetition)
@@ -89,6 +97,22 @@
 ---
 
 ## 📝 Session Log
+
+### 2026-02-06 (i18n + UI Polish)
+- Added 7 new translation files: German, Spanish, Italian, Portuguese, Japanese, Korean, Chinese
+- Updated i18n/index.ts with all new languages and `supportedAppLanguages` export
+- Created UI components in `src/components/`:
+  - `GradientCard`: Card with gradient background and press animation
+  - `PressableScale`: Reusable pressable with scale/opacity animation
+  - `Button`: Multi-variant button with gradients and shadows
+  - `SentenceCard`: Animated sentence display card
+- Installed `expo-linear-gradient` for gradient backgrounds
+- Updated all onboarding screens with:
+  - Gradient backgrounds (`LinearGradient`)
+  - Polished Button component
+  - Better visual hierarchy
+  - Platform-specific shadows
+- All TypeScript checks pass ✅
 
 ### 2026-02-06 (Auth & Animations)
 - Added Apple Sign In screen at `app/(auth)/sign-in.tsx`
@@ -129,5 +153,6 @@ cd api && npm run dev
 - `app/app/` - expo-router pages
 - `app/src/store/useStore.ts` - Zustand store
 - `app/src/hooks/` - React Query hooks
-- `app/src/i18n/translations/` - Translation files
+- `app/src/i18n/translations/` - Translation files (9 languages)
+- `app/src/components/` - Reusable UI components
 - `api/src/routes/` - Backend endpoints

@@ -1,0 +1,147 @@
+{
+  "common": {
+    "continue": "继续",
+    "skip": "跳过",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "search": "搜索",
+    "add": "添加",
+    "close": "关闭",
+    "loading": "加载中...",
+    "error": "出错了",
+    "retry": "重试"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "用你的方式学语言",
+      "subtitle": "主动学习。找到对你重要的句子。记下来。掌握它们。"
+    },
+    "philosophy": {
+      "title": "你的旅程，你的句子",
+      "subtitle": "别等着应用告诉你该学什么。去寻找真实内容——电影、歌曲、对话——收集那些触动你的句子。",
+      "tip1": "看了剧？记下那个完美的句子。",
+      "tip2": "读了文章？保存那个打动你的表达。",
+      "tip3": "听到什么酷的？写下来。"
+    },
+    "method": {
+      "title": "主动学习法",
+      "subtitle": "传统应用给你随机句子。你会忘记90%。但你自己选的句子呢？那些会留在记忆里。",
+      "step1": "在生活中发现句子",
+      "step2": "加上翻译添加进来",
+      "step3": "按自己的节奏每天复习"
+    },
+    "language": {
+      "title": "你的母语是什么？",
+      "subtitle": "我们会用它来显示你语言的翻译和例句。"
+    },
+    "ready": {
+      "title": "准备好了！",
+      "subtitle": "开始从你喜欢的内容中添加句子吧。我们准备了一些示例帮你起步。",
+      "button": "开始学习"
+    }
+  },
+  "tabs": {
+    "sentences": "句子",
+    "youtube": "YouTube",
+    "social": "社交",
+    "settings": "设置"
+  },
+  "sentences": {
+    "title": "我的句子",
+    "empty": {
+      "title": "还没有句子",
+      "subtitle": "点击+添加你的第一个句子"
+    },
+    "add": {
+      "title": "添加句子",
+      "original": "原句",
+      "originalPlaceholder": "输入你想学的句子...",
+      "translation": "翻译",
+      "translationPlaceholder": "输入翻译...",
+      "notes": "笔记（可选）",
+      "notesPlaceholder": "上下文或笔记...",
+      "aiTranslate": "AI翻译",
+      "aiTranslateHint": "让AI翻译这个句子",
+      "premiumRequired": "高级功能"
+    },
+    "sheet": {
+      "new": "新语言",
+      "sentences_count": "{{count}}个句子"
+    },
+    "actions": {
+      "listen": "听",
+      "edit": "编辑",
+      "delete": "删除"
+    }
+  },
+  "youtube": {
+    "title": "YouTube频道",
+    "subtitle": "精选{{language}}学习频道",
+    "empty": "这个语言还没有频道"
+  },
+  "social": {
+    "title": "社交帖子",
+    "subtitle": "从原生内容中学习",
+    "empty": "这个语言还没有帖子"
+  },
+  "settings": {
+    "title": "设置",
+    "account": "账户",
+    "subscription": "订阅",
+    "subscriptionStatus": {
+      "free": "免费版",
+      "premium": "高级版"
+    },
+    "upgradeToPremium": "升级到高级版",
+    "premiumFeatures": {
+      "title": "高级功能",
+      "aiTranslation": "AI翻译",
+      "unlimited": "无限句子",
+      "sync": "云同步"
+    },
+    "nativeLanguage": "母语",
+    "appLanguage": "应用语言",
+    "signOut": "退出登录",
+    "deleteAccount": "删除账户",
+    "about": "关于",
+    "version": "版本"
+  },
+  "auth": {
+    "signIn": {
+      "title": "登录LingoNotes",
+      "subtitle": "在所有设备上同步句子，解锁高级功能。",
+      "continueWithGoogle": "使用Google继续",
+      "continueWithApple": "使用Apple继续",
+      "termsPrefix": "继续即表示你同意我们的",
+      "terms": "服务条款",
+      "and": "和",
+      "privacy": "隐私政策",
+      "skip": "不登录继续"
+    },
+    "error": "认证错误",
+    "googleError": "Google登录失败。请重试。",
+    "appleError": "Apple登录失败。请重试。",
+    "signOut": "退出登录",
+    "signingIn": "登录中..."
+  },
+  "languages": {
+    "en": "英语",
+    "es": "西班牙语",
+    "fr": "法语",
+    "de": "德语",
+    "it": "意大利语",
+    "pt": "葡萄牙语",
+    "nl": "荷兰语",
+    "ru": "俄语",
+    "zh": "中文",
+    "ja": "日语",
+    "ko": "韩语",
+    "ar": "阿拉伯语",
+    "hi": "印地语",
+    "tr": "土耳其语",
+    "pl": "波兰语",
+    "vi": "越南语"
+  }
+}

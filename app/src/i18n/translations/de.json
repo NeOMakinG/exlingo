@@ -1,0 +1,147 @@
+{
+  "common": {
+    "continue": "Weiter",
+    "skip": "Überspringen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "search": "Suchen",
+    "add": "Hinzufügen",
+    "close": "Schließen",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Sprachen auf deine Art lernen",
+      "subtitle": "Sei proaktiv. Finde Sätze, die dir wichtig sind. Notiere sie. Meistere sie."
+    },
+    "philosophy": {
+      "title": "Deine Reise, deine Sätze",
+      "subtitle": "Warte nicht darauf, dass eine App dir zeigt, was du lernen sollst. Suche nach echten Inhalten – Filme, Songs, Gespräche – und sammle die Sätze, die dich ansprechen.",
+      "tip1": "Serie geschaut? Notiere diesen perfekten Satz.",
+      "tip2": "Artikel gelesen? Speichere den Ausdruck, der hängen geblieben ist.",
+      "tip3": "Etwas Cooles gehört? Schreib es auf."
+    },
+    "method": {
+      "title": "Die proaktive Methode",
+      "subtitle": "Traditionelle Apps zeigen dir zufällige Sätze. Du wirst 90% davon vergessen. Aber Sätze, die DU wählst? Die bleiben.",
+      "step1": "Entdecke Sätze in freier Wildbahn",
+      "step2": "Füge sie mit Übersetzungen hinzu",
+      "step3": "Wiederhole täglich in deinem Tempo"
+    },
+    "language": {
+      "title": "Was ist deine Muttersprache?",
+      "subtitle": "Wir verwenden sie, um Übersetzungen und Beispiele in deiner Sprache anzuzeigen."
+    },
+    "ready": {
+      "title": "Du bist bereit!",
+      "subtitle": "Beginne, Sätze aus deinen Lieblingsinhalten hinzuzufügen. Wir haben einige Beispiele zum Einstieg vorbereitet.",
+      "button": "Lernen starten"
+    }
+  },
+  "tabs": {
+    "sentences": "Sätze",
+    "youtube": "YouTube",
+    "social": "Sozial",
+    "settings": "Einstellungen"
+  },
+  "sentences": {
+    "title": "Meine Sätze",
+    "empty": {
+      "title": "Noch keine Sätze",
+      "subtitle": "Tippe auf +, um deinen ersten Satz hinzuzufügen"
+    },
+    "add": {
+      "title": "Satz hinzufügen",
+      "original": "Originalsatz",
+      "originalPlaceholder": "Gib den Satz ein, den du lernen möchtest...",
+      "translation": "Übersetzung",
+      "translationPlaceholder": "Gib die Übersetzung ein...",
+      "notes": "Notizen (optional)",
+      "notesPlaceholder": "Kontext oder Notizen...",
+      "aiTranslate": "KI-Übersetzung",
+      "aiTranslateHint": "Lass KI diesen Satz übersetzen",
+      "premiumRequired": "Premium-Funktion"
+    },
+    "sheet": {
+      "new": "Neue Sprache",
+      "sentences_count": "{{count}} Sätze"
+    },
+    "actions": {
+      "listen": "Anhören",
+      "edit": "Bearbeiten",
+      "delete": "Löschen"
+    }
+  },
+  "youtube": {
+    "title": "YouTube-Kanäle",
+    "subtitle": "Ausgewählte Kanäle zum Lernen von {{language}}",
+    "empty": "Noch keine Kanäle für diese Sprache verfügbar"
+  },
+  "social": {
+    "title": "Soziale Beiträge",
+    "subtitle": "Lerne aus authentischem Content",
+    "empty": "Noch keine Beiträge für diese Sprache verfügbar"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "account": "Konto",
+    "subscription": "Abonnement",
+    "subscriptionStatus": {
+      "free": "Kostenloser Plan",
+      "premium": "Premium"
+    },
+    "upgradeToPremium": "Auf Premium upgraden",
+    "premiumFeatures": {
+      "title": "Premium-Funktionen",
+      "aiTranslation": "KI-gestützte Übersetzungen",
+      "unlimited": "Unbegrenzte Sätze",
+      "sync": "Cloud-Sync auf allen Geräten"
+    },
+    "nativeLanguage": "Muttersprache",
+    "appLanguage": "App-Sprache",
+    "signOut": "Abmelden",
+    "deleteAccount": "Konto löschen",
+    "about": "Über",
+    "version": "Version"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Bei LingoNotes anmelden",
+      "subtitle": "Synchronisiere deine Sätze auf allen Geräten und schalte Premium-Funktionen frei.",
+      "continueWithGoogle": "Mit Google fortfahren",
+      "continueWithApple": "Mit Apple fortfahren",
+      "termsPrefix": "Mit dem Fortfahren akzeptierst du unsere",
+      "terms": "Nutzungsbedingungen",
+      "and": "und",
+      "privacy": "Datenschutzrichtlinie",
+      "skip": "Ohne Konto fortfahren"
+    },
+    "error": "Authentifizierungsfehler",
+    "googleError": "Anmeldung mit Google fehlgeschlagen. Bitte versuche es erneut.",
+    "appleError": "Anmeldung mit Apple fehlgeschlagen. Bitte versuche es erneut.",
+    "signOut": "Abmelden",
+    "signingIn": "Anmeldung..."
+  },
+  "languages": {
+    "en": "Englisch",
+    "es": "Spanisch",
+    "fr": "Französisch",
+    "de": "Deutsch",
+    "it": "Italienisch",
+    "pt": "Portugiesisch",
+    "nl": "Niederländisch",
+    "ru": "Russisch",
+    "zh": "Chinesisch",
+    "ja": "Japanisch",
+    "ko": "Koreanisch",
+    "ar": "Arabisch",
+    "hi": "Hindi",
+    "tr": "Türkisch",
+    "pl": "Polnisch",
+    "vi": "Vietnamesisch"
+  }
+}

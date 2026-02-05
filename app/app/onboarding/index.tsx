@@ -1,66 +1,100 @@
-import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import Animated, { FadeIn, FadeInDown, FadeInUp, ZoomIn } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeInUp, ZoomIn } from 'react-native-reanimated';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Button } from '../../src/components';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
 export default function WelcomeScreen() {
   const { t } = useTranslation();
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        {/* Hero illustration */}
-        <Animated.View style={styles.illustration} entering={ZoomIn.delay(200).duration(600).springify()}>
-          <Text style={styles.emoji}>📝</Text>
+    <LinearGradient
+      colors={['#0f0f1a', '#1a1a2e', '#0f0f1a']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.background}
+    >
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          {/* Hero illustration with gradient glow */}
+          <Animated.View 
+            style={styles.illustrationWrapper} 
+            entering={ZoomIn.delay(200).duration(600).springify()}
+          >
+            <LinearGradient
+              colors={['#6366f1', '#4f46e5', '#4338ca']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.illustrationGlow}
+            />
+            <View style={styles.illustration}>
+              <Text style={styles.emoji}>📝</Text>
+            </View>
+          </Animated.View>
+
+          <View style={styles.textContainer}>
+            <Animated.Text 
+              style={styles.title} 
+              entering={FadeInUp.delay(400).duration(500)}
+            >
+              {t('onboarding.welcome.title')}
+            </Animated.Text>
+            <Animated.Text 
+              style={styles.subtitle}
+              entering={FadeInUp.delay(600).duration(500)}
+            >
+              {t('onboarding.welcome.subtitle')}
+            </Animated.Text>
+          </View>
+        </View>
+
+        <Animated.View style={styles.footer} entering={FadeIn.delay(800).duration(500)}>
+          <View style={styles.pagination}>
+            <View style={[styles.dot, styles.dotActive]} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+          </View>
+
+          <Button
+            title={t('common.continue')}
+            onPress={() => router.push('/onboarding/philosophy')}
+            size="lg"
+            fullWidth
+          />
         </Animated.View>
-
-        <View style={styles.textContainer}>
-          <Animated.Text 
-            style={styles.title} 
-            entering={FadeInUp.delay(400).duration(500)}
-          >
-            {t('onboarding.welcome.title')}
-          </Animated.Text>
-          <Animated.Text 
-            style={styles.subtitle}
-            entering={FadeInUp.delay(600).duration(500)}
-          >
-            {t('onboarding.welcome.subtitle')}
-          </Animated.Text>
-        </View>
-      </View>
-
-      <Animated.View style={styles.footer} entering={FadeIn.delay(800).duration(500)}>
-        <View style={styles.pagination}>
-          <View style={[styles.dot, styles.dotActive]} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-        </View>
-
-        <Pressable
-          style={styles.button}
-          onPress={() => router.push('/onboarding/philosophy')}
-        >
-          <Text style={styles.buttonText}>{t('common.continue')}</Text>
-        </Pressable>
-      </Animated.View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: colors.background,
   },
   content: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: spacing.lg,
+  },
+  illustrationWrapper: {
+    marginBottom: spacing.xl,
+    position: 'relative',
+  },
+  illustrationGlow: {
+    position: 'absolute',
+    width: 180,
+    height: 180,
+    borderRadius: 90,
+    opacity: 0.3,
+    transform: [{ scale: 1.1 }],
   },
   illustration: {
     width: 160,
@@ -69,7 +103,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.backgroundSecondary,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.xl,
+    borderWidth: 2,
+    borderColor: colors.primaryLight,
   },
   emoji: {
     fontSize: 72,
@@ -110,16 +145,5 @@ const styles = StyleSheet.create({
   dotActive: {
     backgroundColor: colors.primary,
     width: 24,
-  },
-  button: {
-    backgroundColor: colors.primary,
-    paddingVertical: spacing.md,
-    borderRadius: borderRadius.md,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: colors.text,
-    fontSize: fontSize.md,
-    fontWeight: '600',
   },
 });

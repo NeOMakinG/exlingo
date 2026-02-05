@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { View, Text, StyleSheet, Pressable, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, Platform } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import Animated, { FadeIn, FadeInUp, FadeInDown } from 'react-native-reanimated';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useStore } from '../../src/store/useStore';
 import { SUPPORTED_LANGUAGES } from '../../src/utils/languages';
 import { LanguageCode } from '../../src/types';
+import { Button, PressableScale } from '../../src/components';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 import i18n from '../../src/i18n';
 
@@ -40,65 +42,95 @@ export default function LanguageScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <Animated.View style={styles.header} entering={FadeInDown.delay(100).duration(400)}>
-        <Text style={styles.title}>{t('onboarding.language.title')}</Text>
-        <Text style={styles.subtitle}>{t('onboarding.language.subtitle')}</Text>
-      </Animated.View>
+    <LinearGradient
+      colors={['#0f0f1a', '#1a1a2e', '#0f0f1a']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.background}
+    >
+      <SafeAreaView style={styles.container}>
+        <Animated.View style={styles.header} entering={FadeInDown.delay(100).duration(400)}>
+          <Text style={styles.title}>{t('onboarding.language.title')}</Text>
+          <Text style={styles.subtitle}>{t('onboarding.language.subtitle')}</Text>
+        </Animated.View>
 
-      <ScrollView 
-        style={styles.scrollView}
-        contentContainerStyle={styles.languageGrid}
-        showsVerticalScrollIndicator={false}
-      >
-        {SUPPORTED_LANGUAGES.map((lang, index) => (
-          <Animated.View 
-            key={lang.code}
-            entering={FadeInUp.delay(200 + index * 50).duration(300)}
-          >
-            <Pressable
-              style={[
-                styles.languageCard,
-                selectedLanguage === lang.code && styles.languageCardSelected,
-              ]}
-              onPress={() => setSelectedLanguage(lang.code)}
+        <ScrollView 
+          style={styles.scrollView}
+          contentContainerStyle={styles.languageGrid}
+          showsVerticalScrollIndicator={false}
+        >
+          {SUPPORTED_LANGUAGES.map((lang, index) => (
+            <Animated.View 
+              key={lang.code}
+              entering={FadeInUp.delay(200 + index * 50).duration(300)}
             >
-              <Text style={styles.flag}>{lang.flag}</Text>
-              <View style={styles.languageInfo}>
-                <Text style={styles.languageName}>{lang.nativeName}</Text>
-                <Text style={styles.languageNameEnglish}>{lang.name}</Text>
-              </View>
-              {selectedLanguage === lang.code && (
-                <Animated.View style={styles.checkmark} entering={FadeIn.duration(200)}>
-                  <Text style={styles.checkmarkText}>✓</Text>
-                </Animated.View>
-              )}
-            </Pressable>
-          </Animated.View>
-        ))}
-      </ScrollView>
+              <PressableScale
+                style={[
+                  styles.languageCard,
+                  selectedLanguage === lang.code && styles.languageCardSelected,
+                  selectedLanguage === lang.code && shadowStyle,
+                ]}
+                onPress={() => setSelectedLanguage(lang.code)}
+              >
+                <Text style={styles.flag}>{lang.flag}</Text>
+                <View style={styles.languageInfo}>
+                  <Text style={styles.languageName}>{lang.nativeName}</Text>
+                  <Text style={styles.languageNameEnglish}>{lang.name}</Text>
+                </View>
+                {selectedLanguage === lang.code && (
+                  <Animated.View entering={FadeIn.duration(200)}>
+                    <LinearGradient
+                      colors={['#6366f1', '#4f46e5']}
+                      style={styles.checkmark}
+                    >
+                      <Text style={styles.checkmarkText}>✓</Text>
+                    </LinearGradient>
+                  </Animated.View>
+                )}
+              </PressableScale>
+            </Animated.View>
+          ))}
+        </ScrollView>
 
-      <Animated.View style={styles.footer} entering={FadeIn.delay(800).duration(400)}>
-        <View style={styles.pagination}>
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={[styles.dot, styles.dotActive]} />
-          <View style={styles.dot} />
-        </View>
+        <Animated.View style={styles.footer} entering={FadeIn.delay(800).duration(400)}>
+          <View style={styles.pagination}>
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={[styles.dot, styles.dotActive]} />
+            <View style={styles.dot} />
+          </View>
 
-        <Pressable style={styles.button} onPress={handleContinue}>
-          <Text style={styles.buttonText}>{t('common.continue')}</Text>
-        </Pressable>
-      </Animated.View>
-    </SafeAreaView>
+          <Button
+            title={t('common.continue')}
+            onPress={handleContinue}
+            size="lg"
+            fullWidth
+          />
+        </Animated.View>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
+const shadowStyle = Platform.select({
+  ios: {
+    shadowColor: colors.primary,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+  },
+  android: {
+    elevation: 6,
+  },
+});
+
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: colors.background,
   },
   header: {
     paddingHorizontal: spacing.lg,
@@ -158,13 +190,13 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
   },
   checkmarkText: {
     color: colors.text,
     fontWeight: '700',
+    fontSize: 14,
   },
   footer: {
     paddingHorizontal: spacing.lg,
@@ -186,16 +218,5 @@ const styles = StyleSheet.create({
   dotActive: {
     backgroundColor: colors.primary,
     width: 24,
-  },
-  button: {
-    backgroundColor: colors.primary,
-    paddingVertical: spacing.md,
-    borderRadius: borderRadius.md,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: colors.text,
-    fontSize: fontSize.md,
-    fontWeight: '600',
   },
 });

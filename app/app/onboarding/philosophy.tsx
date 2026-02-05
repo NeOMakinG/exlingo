@@ -1,7 +1,9 @@
-import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import Animated, { FadeIn, FadeInUp, ZoomIn } from 'react-native-reanimated';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Button, GradientCard } from '../../src/components';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
 export default function PhilosophyScreen() {
@@ -10,85 +12,105 @@ export default function PhilosophyScreen() {
   const tips = [
     { emoji: '🎬', text: t('onboarding.philosophy.tip1') },
     { emoji: '📰', text: t('onboarding.philosophy.tip2') },
-    { emoji: '👂', text: t('onboarding.philosophy.tip3') },
+    { emoji: '🎧', text: t('onboarding.philosophy.tip3') },
   ];
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Animated.View style={styles.illustration} entering={ZoomIn.delay(100).duration(500).springify()}>
-          <Text style={styles.emoji}>🔍</Text>
-        </Animated.View>
+    <LinearGradient
+      colors={['#0f0f1a', '#1a1a2e', '#0f0f1a']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.background}
+    >
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          <Animated.View 
+            style={styles.illustrationWrapper} 
+            entering={ZoomIn.delay(200).duration(600).springify()}
+          >
+            <View style={styles.illustration}>
+              <Text style={styles.emoji}>🌟</Text>
+            </View>
+          </Animated.View>
 
-        <View style={styles.textContainer}>
-          <Animated.Text style={styles.title} entering={FadeInUp.delay(200).duration(400)}>
+          <Animated.Text 
+            style={styles.title} 
+            entering={FadeInUp.delay(300).duration(500)}
+          >
             {t('onboarding.philosophy.title')}
           </Animated.Text>
-          <Animated.Text style={styles.subtitle} entering={FadeInUp.delay(350).duration(400)}>
+          
+          <Animated.Text 
+            style={styles.subtitle}
+            entering={FadeInUp.delay(400).duration(500)}
+          >
             {t('onboarding.philosophy.subtitle')}
           </Animated.Text>
+
+          <View style={styles.tipsContainer}>
+            {tips.map((tip, index) => (
+              <Animated.View
+                key={index}
+                entering={FadeInUp.delay(500 + index * 100).duration(400).springify()}
+              >
+                <GradientCard variant="subtle" style={styles.tipCard}>
+                  <View style={styles.tipContent}>
+                    <Text style={styles.tipEmoji}>{tip.emoji}</Text>
+                    <Text style={styles.tipText}>{tip.text}</Text>
+                  </View>
+                </GradientCard>
+              </Animated.View>
+            ))}
+          </View>
         </View>
 
-        <View style={styles.tipsContainer}>
-          {tips.map((tip, index) => (
-            <Animated.View 
-              key={index} 
-              style={styles.tipCard}
-              entering={FadeInUp.delay(500 + index * 150).duration(400)}
-            >
-              <Text style={styles.tipEmoji}>{tip.emoji}</Text>
-              <Text style={styles.tipText}>{tip.text}</Text>
-            </Animated.View>
-          ))}
-        </View>
-      </View>
+        <Animated.View style={styles.footer} entering={FadeIn.delay(900).duration(500)}>
+          <View style={styles.pagination}>
+            <View style={styles.dot} />
+            <View style={[styles.dot, styles.dotActive]} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+          </View>
 
-      <Animated.View style={styles.footer} entering={FadeIn.delay(1000).duration(400)}>
-        <View style={styles.pagination}>
-          <View style={styles.dot} />
-          <View style={[styles.dot, styles.dotActive]} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-        </View>
-
-        <Pressable
-          style={styles.button}
-          onPress={() => router.push('/onboarding/method')}
-        >
-          <Text style={styles.buttonText}>{t('common.continue')}</Text>
-        </Pressable>
-      </Animated.View>
-    </SafeAreaView>
+          <Button
+            title={t('common.continue')}
+            onPress={() => router.push('/onboarding/method')}
+            size="lg"
+            fullWidth
+          />
+        </Animated.View>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: colors.background,
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: spacing.lg,
+    paddingTop: spacing.xl,
+  },
+  illustrationWrapper: {
+    marginBottom: spacing.lg,
   },
   illustration: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
     backgroundColor: colors.backgroundSecondary,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.lg,
   },
   emoji: {
-    fontSize: 56,
-  },
-  textContainer: {
-    alignItems: 'center',
-    marginBottom: spacing.xl,
+    fontSize: 48,
   },
   title: {
     fontSize: fontSize.xl,
@@ -103,17 +125,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 24,
     paddingHorizontal: spacing.sm,
+    marginBottom: spacing.lg,
   },
   tipsContainer: {
     width: '100%',
-    gap: spacing.md,
+    gap: spacing.sm,
   },
   tipCard: {
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  tipContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: colors.card,
-    padding: spacing.md,
-    borderRadius: borderRadius.md,
     gap: spacing.md,
   },
   tipEmoji: {
@@ -123,7 +147,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: fontSize.sm,
     color: colors.text,
-    lineHeight: 20,
+    lineHeight: 22,
   },
   footer: {
     paddingHorizontal: spacing.lg,
@@ -144,16 +168,5 @@ const styles = StyleSheet.create({
   dotActive: {
     backgroundColor: colors.primary,
     width: 24,
-  },
-  button: {
-    backgroundColor: colors.primary,
-    paddingVertical: spacing.md,
-    borderRadius: borderRadius.md,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: colors.text,
-    fontSize: fontSize.md,
-    fontWeight: '600',
   },
 });

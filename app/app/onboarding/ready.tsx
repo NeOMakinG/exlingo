@@ -1,13 +1,15 @@
-import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import Animated, { FadeIn, FadeInUp, ZoomIn, BounceIn } from 'react-native-reanimated';
+import Animated, { BounceIn, FadeIn, FadeInUp, ZoomIn } from 'react-native-reanimated';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Button, GradientCard } from '../../src/components';
 import { useStore } from '../../src/store/useStore';
 import { colors, spacing, fontSize, borderRadius } from '../../src/constants/theme';
 
 export default function ReadyScreen() {
   const { t } = useTranslation();
-  const completeOnboarding = useStore((s) => s.completeOnboarding);
+  const completeOnboarding = useStore((state) => state.completeOnboarding);
 
   const handleStart = () => {
     completeOnboarding();
@@ -15,86 +17,109 @@ export default function ReadyScreen() {
   };
 
   const features = [
-    { emoji: '📝', text: 'Add sentences from movies, books, songs' },
-    { emoji: '🔊', text: 'Listen to pronunciation' },
-    { emoji: '🎯', text: 'Review at your own pace' },
+    { emoji: '✨', text: 'AI-powered translations' },
+    { emoji: '🔊', text: 'Text-to-speech' },
+    { emoji: '☁️', text: 'Cloud sync' },
   ];
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Animated.View style={styles.illustration} entering={BounceIn.delay(200).duration(600)}>
-          <Text style={styles.emoji}>🚀</Text>
-        </Animated.View>
+    <LinearGradient
+      colors={['#0f0f1a', '#1a1a2e', '#0f0f1a']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.background}
+    >
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          <Animated.View 
+            style={styles.illustrationWrapper} 
+            entering={BounceIn.delay(200).duration(800)}
+          >
+            <LinearGradient
+              colors={['#22c55e', '#16a34a', '#15803d']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.illustrationGradient}
+            >
+              <Text style={styles.emoji}>🚀</Text>
+            </LinearGradient>
+          </Animated.View>
 
-        <View style={styles.textContainer}>
-          <Animated.Text style={styles.title} entering={FadeInUp.delay(400).duration(500)}>
+          <Animated.Text 
+            style={styles.title} 
+            entering={FadeInUp.delay(400).duration(500)}
+          >
             {t('onboarding.ready.title')}
           </Animated.Text>
-          <Animated.Text style={styles.subtitle} entering={FadeInUp.delay(550).duration(500)}>
+          
+          <Animated.Text 
+            style={styles.subtitle}
+            entering={FadeInUp.delay(500).duration(500)}
+          >
             {t('onboarding.ready.subtitle')}
           </Animated.Text>
+
+          <Animated.View 
+            style={styles.featuresContainer}
+            entering={FadeIn.delay(600).duration(500)}
+          >
+            {features.map((feature, index) => (
+              <Animated.View
+                key={index}
+                entering={FadeInUp.delay(700 + index * 100).duration(400)}
+              >
+                <View style={styles.feature}>
+                  <Text style={styles.featureEmoji}>{feature.emoji}</Text>
+                  <Text style={styles.featureText}>{feature.text}</Text>
+                </View>
+              </Animated.View>
+            ))}
+          </Animated.View>
         </View>
 
-        <View style={styles.features}>
-          {features.map((feature, index) => (
-            <Animated.View 
-              key={index} 
-              style={styles.featureItem}
-              entering={FadeInUp.delay(700 + index * 100).duration(400)}
-            >
-              <Text style={styles.featureEmoji}>{feature.emoji}</Text>
-              <Text style={styles.featureText}>{feature.text}</Text>
-            </Animated.View>
-          ))}
-        </View>
-      </View>
+        <Animated.View style={styles.footer} entering={ZoomIn.delay(1000).duration(400).springify()}>
+          <View style={styles.pagination}>
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={styles.dot} />
+            <View style={[styles.dot, styles.dotActive]} />
+          </View>
 
-      <Animated.View style={styles.footer} entering={FadeIn.delay(1100).duration(400)}>
-        <View style={styles.pagination}>
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={styles.dot} />
-          <View style={[styles.dot, styles.dotActive]} />
-        </View>
-
-        <Animated.View entering={ZoomIn.delay(1200).duration(300)}>
-          <Pressable style={styles.button} onPress={handleStart}>
+          <GradientCard variant="primary" onPress={handleStart}>
             <Text style={styles.buttonText}>{t('onboarding.ready.button')}</Text>
-          </Pressable>
+          </GradientCard>
         </Animated.View>
-      </Animated.View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: colors.background,
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
     paddingHorizontal: spacing.lg,
   },
-  illustration: {
-    width: 140,
-    height: 140,
-    borderRadius: 70,
-    backgroundColor: colors.backgroundSecondary,
+  illustrationWrapper: {
+    marginBottom: spacing.xl,
+  },
+  illustrationGradient: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.xl,
   },
   emoji: {
-    fontSize: 64,
-  },
-  textContainer: {
-    alignItems: 'center',
-    marginBottom: spacing.xl,
+    fontSize: 56,
   },
   title: {
     fontSize: fontSize.xxl,
@@ -109,26 +134,22 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 24,
     paddingHorizontal: spacing.md,
+    marginBottom: spacing.xl,
   },
-  features: {
-    width: '100%',
+  featuresContainer: {
     gap: spacing.md,
   },
-  featureItem: {
+  feature: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: colors.card,
-    padding: spacing.md,
-    borderRadius: borderRadius.md,
-    gap: spacing.md,
+    gap: spacing.sm,
   },
   featureEmoji: {
-    fontSize: 24,
+    fontSize: 20,
   },
   featureText: {
-    flex: 1,
-    fontSize: fontSize.sm,
-    color: colors.text,
+    fontSize: fontSize.md,
+    color: colors.textSecondary,
   },
   footer: {
     paddingHorizontal: spacing.lg,
@@ -150,15 +171,10 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     width: 24,
   },
-  button: {
-    backgroundColor: colors.primary,
-    paddingVertical: spacing.md,
-    borderRadius: borderRadius.md,
-    alignItems: 'center',
-  },
   buttonText: {
     color: colors.text,
-    fontSize: fontSize.md,
-    fontWeight: '600',
+    fontSize: fontSize.lg,
+    fontWeight: '700',
+    textAlign: 'center',
   },
 });

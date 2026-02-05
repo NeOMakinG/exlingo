@@ -1,0 +1,147 @@
+{
+  "common": {
+    "continue": "Continuar",
+    "skip": "Saltar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "add": "Añadir",
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "retry": "Reintentar"
+  },
+  "onboarding": {
+    "welcome": {
+      "title": "Aprende idiomas a tu manera",
+      "subtitle": "Sé proactivo. Encuentra frases que te importan. Anótalas. Domínalas."
+    },
+    "philosophy": {
+      "title": "Tu viaje, tus frases",
+      "subtitle": "No esperes a que las apps te muestren qué aprender. Busca contenido real — películas, canciones, conversaciones — y captura las frases que te resuenan.",
+      "tip1": "¿Viste una serie? Anota esa frase perfecta.",
+      "tip2": "¿Leíste un artículo? Guarda la expresión que te impactó.",
+      "tip3": "¿Escuchaste algo genial? Escríbelo."
+    },
+    "method": {
+      "title": "El método proactivo",
+      "subtitle": "Las apps tradicionales te muestran frases aleatorias. Olvidarás el 90%. Pero las frases que TÚ eliges, esas se quedan.",
+      "step1": "Descubre frases en la vida real",
+      "step2": "Añádelas con traducciones",
+      "step3": "Repasa diariamente a tu ritmo"
+    },
+    "language": {
+      "title": "¿Cuál es tu idioma nativo?",
+      "subtitle": "Lo usaremos para mostrarte traducciones y ejemplos en tu idioma."
+    },
+    "ready": {
+      "title": "¡Estás listo!",
+      "subtitle": "Empieza a añadir frases de tu contenido favorito. Hemos incluido algunos ejemplos para empezar.",
+      "button": "Comenzar a aprender"
+    }
+  },
+  "tabs": {
+    "sentences": "Frases",
+    "youtube": "YouTube",
+    "social": "Social",
+    "settings": "Ajustes"
+  },
+  "sentences": {
+    "title": "Mis frases",
+    "empty": {
+      "title": "Aún no hay frases",
+      "subtitle": "Toca + para añadir tu primera frase"
+    },
+    "add": {
+      "title": "Añadir frase",
+      "original": "Frase original",
+      "originalPlaceholder": "Escribe la frase que quieres aprender...",
+      "translation": "Traducción",
+      "translationPlaceholder": "Escribe la traducción...",
+      "notes": "Notas (opcional)",
+      "notesPlaceholder": "Contexto o notas...",
+      "aiTranslate": "Traducción IA",
+      "aiTranslateHint": "Deja que la IA traduzca esta frase",
+      "premiumRequired": "Función premium"
+    },
+    "sheet": {
+      "new": "Nuevo idioma",
+      "sentences_count": "{{count}} frases"
+    },
+    "actions": {
+      "listen": "Escuchar",
+      "edit": "Editar",
+      "delete": "Eliminar"
+    }
+  },
+  "youtube": {
+    "title": "Canales de YouTube",
+    "subtitle": "Canales seleccionados para aprender {{language}}",
+    "empty": "Aún no hay canales disponibles para este idioma"
+  },
+  "social": {
+    "title": "Publicaciones sociales",
+    "subtitle": "Aprende de contenido nativo",
+    "empty": "Aún no hay publicaciones disponibles para este idioma"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "account": "Cuenta",
+    "subscription": "Suscripción",
+    "subscriptionStatus": {
+      "free": "Plan gratuito",
+      "premium": "Premium"
+    },
+    "upgradeToPremium": "Mejorar a Premium",
+    "premiumFeatures": {
+      "title": "Funciones Premium",
+      "aiTranslation": "Traducciones con IA",
+      "unlimited": "Frases ilimitadas",
+      "sync": "Sincronización en la nube"
+    },
+    "nativeLanguage": "Idioma nativo",
+    "appLanguage": "Idioma de la app",
+    "signOut": "Cerrar sesión",
+    "deleteAccount": "Eliminar cuenta",
+    "about": "Acerca de",
+    "version": "Versión"
+  },
+  "auth": {
+    "signIn": {
+      "title": "Inicia sesión en LingoNotes",
+      "subtitle": "Sincroniza tus frases en todos tus dispositivos y desbloquea funciones premium.",
+      "continueWithGoogle": "Continuar con Google",
+      "continueWithApple": "Continuar con Apple",
+      "termsPrefix": "Al continuar, aceptas nuestros",
+      "terms": "Términos de servicio",
+      "and": "y",
+      "privacy": "Política de privacidad",
+      "skip": "Continuar sin cuenta"
+    },
+    "error": "Error de autenticación",
+    "googleError": "Error al iniciar sesión con Google. Inténtalo de nuevo.",
+    "appleError": "Error al iniciar sesión con Apple. Inténtalo de nuevo.",
+    "signOut": "Cerrar sesión",
+    "signingIn": "Iniciando sesión..."
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "de": "Alemán",
+    "it": "Italiano",
+    "pt": "Portugués",
+    "nl": "Neerlandés",
+    "ru": "Ruso",
+    "zh": "Chino",
+    "ja": "Japonés",
+    "ko": "Coreano",
+    "ar": "Árabe",
+    "hi": "Hindi",
+    "tr": "Turco",
+    "pl": "Polaco",
+    "vi": "Vietnamita"
+  }
+}
