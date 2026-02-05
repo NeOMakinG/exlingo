@@ -142,7 +142,7 @@ export const useStore = create<AppStore>()(
       }),
     }),
     {
-      name: 'lingo-notes-storage',
+      name: 'exlingo-storage',
       storage: createJSONStorage(() => AsyncStorage),
     }
   )

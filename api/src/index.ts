@@ -18,7 +18,7 @@ app.use('*', cors({
 }));
 
 // Health check
-app.get('/', (c) => c.json({ status: 'ok', service: 'lingo-notes-api' }));
+app.get('/', (c) => c.json({ status: 'ok', service: 'exlingo-api' }));
 app.get('/health', (c) => c.json({ status: 'healthy' }));
 
 // Routes

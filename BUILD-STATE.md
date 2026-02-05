@@ -1,4 +1,4 @@
-# LingoNotes Build State
+# Exlingo Build State
 
 ## Current Status: 🟡 In Progress (70% complete)
 

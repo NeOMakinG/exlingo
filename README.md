@@ -1,4 +1,4 @@
-# LingoNotes 📝
+# Exlingo 🌐
 
 A proactive language learning app where YOU choose what to learn.
 
